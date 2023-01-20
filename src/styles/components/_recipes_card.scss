@@ -22,8 +22,7 @@
     text-align: center;
     width: 200px;
     height: 200px;
-    background-color: aqua;
-    background: transparent url('../../../public/Ojingeo-muchim-1.png') 0% 0% no-repeat padding-box;
+
 }
 
 .recipes_card_rate_container {
@@ -37,12 +36,14 @@
     div {
         display: flex;
         margin-left: 12px;
+
         &:last-child {
             height: 19px;
             width: 17px;
             margin-right: 20px;
             margin-top: 40px;
         }
+
         p {
             font-family: $secondary_font;
             font-size: 26px;
@@ -62,14 +63,18 @@
     p {
         font-size: 30px;
         color: $primary;
-        &:first-child{
-            font-family: $secondary_font;
 
+        &:first-child {
+            font-family: $secondary_font;
             margin-right: 5px;
+            text-align: center;
         }
-        &:last-child{
+
+        &:last-child {
             padding-top: 10px;
             font-family: $primary_font;
+            text-align: left;
+            margin-right: 15px;
         }
     }
 }

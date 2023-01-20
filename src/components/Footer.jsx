@@ -2,10 +2,10 @@ const Footer = () => {
     return (
         <footer className="footer_container">
             <div>
-                <p>Con el patrocinio de</p>
+                <p className="footer_text">Con el patrocinio de</p>
             </div>
             <div>
-                <img src="grupo_7610.png">
+                <img alt="patrocinador" src="grupo_7610.png">
 
                 </img>
             </div>

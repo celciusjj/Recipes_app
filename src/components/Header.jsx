@@ -4,7 +4,6 @@ import useWindowSize from '../hooks/useWindowsSize';
 const Header = () => {
     const windowSize = useWindowSize();
     const [cards, setCards] = useState(linkCardsInfo);
-    console.log(windowSize.width)
     useEffect(() => {
         setCards(linkCardsInfo);
     }, [])
@@ -22,7 +21,7 @@ const Header = () => {
                         </p>
                         {
                             cards.map(item => (
-                                <p>{item.text}</p>
+                                <p key={Math.random()}>{item.text}</p>
                             ))
                         }
                     </div>

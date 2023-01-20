@@ -1,13 +1,9 @@
 import axios from "axios";
-const apiKey = "e90e7bcc2e754430bc4196b4086b2236";
-const url = "https://api.spoonacular.com/recipes/random?apiKey=e90e7bcc2e754430bc4196b4086b2236"
+const apiKey = "ac68f5572fca4421a4f74b872ce4f550";
+const url = `https://api.spoonacular.com/recipes/complexSearch?query=pasta&maxFat=25&number=3&apiKey=${apiKey}`
 
 export const getRecipes = async () => {
-    const response = await axios.get(url, {
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    });
-    console.log(response)
+    //the function should be received the params, but for the porpose of project, the url is fixed.
+    const response = await axios.get(url);
     return response.data;
 }

@@ -4,7 +4,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './styles/styles.scss';
 import { QueryClient, QueryClientProvider } from "react-query";
-
+import {RecipersProvider} from './context/RecipersProvider';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
@@ -13,8 +13,11 @@ const queryClient = new QueryClient()
 root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-      <App />
+      <RecipersProvider>
+        <App />
+      </RecipersProvider>
     </QueryClientProvider>
+
   </React.StrictMode>
 );
 

@@ -1,9 +1,22 @@
+import { useContext, useEffect } from 'react';
+import RecipersContext from '../context/RecipersProvider';
 import RecipeCard from "./RecipeCard";
 import { getRecipes } from "../petitions/index";
 import { useQuery } from "react-query"
 
+
 const NewRecipesPage = () => {
+    const { recipes, setRecipes } = useContext(RecipersContext);
     const { data, status } = useQuery('recipes', getRecipes);
+
+    useEffect(() => {
+        if (status === 'success') {
+            const { results } = data;
+            console.log(results);
+            setRecipes(results);
+        }
+    }, [data, setRecipes, status])
+
     return (
         <div>
             <div>
@@ -12,10 +25,24 @@ const NewRecipesPage = () => {
                 </h3>
             </div>
             <div className="new_recipes_recipes_container">
-                <RecipeCard />
-                <RecipeCard />
-                <RecipeCard />
-                <RecipeCard />
+                {/** Recipe by default */}
+                <RecipeCard
+                    key={Math.random()}
+                    url={"/Ojingeo-muchim-1.png"}
+                    name={"Ojingeo"}
+                    text={"Muchim"}
+                />
+                {
+                    recipes.map(item => (
+                        <RecipeCard
+                            key={item.id}
+                            url={item.image}
+                            name={item.title}
+                            text={item.nutrition.nutrients[0].name}
+                        />
+                    ))
+                    //recipe car by default
+                }
             </div>
         </div>
     );

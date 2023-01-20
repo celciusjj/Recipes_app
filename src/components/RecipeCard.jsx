@@ -1,11 +1,11 @@
-const RecipeCard = () => {
+const RecipeCard = (props) => {
     return (
         <div className="recipes_card_container">
             <div className="recipes_card_body">
-                <div className="recipes_card_presentation" />
+                <img className="recipes_card_presentation" src={props.url} alt="new recipe"/>
                 <div className="recipes_card_name_container">
-                    <p>Ojingeo</p>
-                    <p>Muchim</p>
+                    <p>{props.name}</p>
+                    <p>{props.text}</p>
                 </div>
                 <div className="recipes_card_rate_container">
                     <div>
@@ -15,7 +15,6 @@ const RecipeCard = () => {
                     <div >
                         <img alt="favoriteicon" src="/icons/ic-favorite.svg"></img>
                     </div>
-
                 </div>
             </div>
         </div>

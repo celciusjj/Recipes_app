@@ -3,28 +3,44 @@
     height: 170px;
     background: transparent linear-gradient(180deg, #C2E3F3 0%, #6AA3C1 100%) 0% 0% no-repeat padding-box;
     box-shadow: 4px 6px 23px #A9A9A911;
-    opacity: 1;
-    flex: 1;
     align-items: center;
+    justify-content: space-around;
+
     div {
         &:first-child {
-            flex: 1.2;
-            padding-left: 200px;
-            p {
-                font-family: $primary_font;
-                font-size: 60px;
-                color: $secondary;
-                white-space: nowrap;
-            }
+
+            justify-content: flex-end;
         }
+
         &:last-child {
+
             margin-top: -10px;
-            flex: 0.5;
-            padding-right: 200px;
+
+            justify-content: flex-start;
+
             img {
                 width: 536px;
                 height: 248px;
+
+                object-position:50% 50%;
+                @media (max-width: 720px) {
+                    width: 236px;
+                    height: 248px;
+                }
             }
         }
+    }
+}
+
+.footer_text {
+    font-family: $primary_font;
+    font-size: 60px;
+    color: $secondary;
+    white-space: nowrap;
+
+
+
+    @media (max-width: 1000px) {
+        font-size: 30px;
     }
 }

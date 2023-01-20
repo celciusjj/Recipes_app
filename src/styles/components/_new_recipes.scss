@@ -2,12 +2,31 @@
     margin: 1ch;
     font-size: 70px;
     margin-left: 70px;
+    white-space: nowrap;
     color: $primary;
     font-family: $primary_font;
     font-weight: 100;
+
+    @media (max-width: 720px) {
+        font-size:70px;
+        margin: 0px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+
 }
 
 .new_recipes_recipes_container {
+    @media (max-width: 720px) {
+        padding-top: 10px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    padding-top: 10px;
+    padding-left: 60px;
+    padding-right: 60px;
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;

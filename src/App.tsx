@@ -5,7 +5,7 @@ import NewRecipesPage from "./components/NewRecipesPage";
 
 function App() {
   return (
-    <div style={{height: 1000}}>
+    <div style={{ display: "flex", flexDirection: "column", flex: 1 }}>
       <Header />
       <LandingBanner />
       <NewRecipesPage />

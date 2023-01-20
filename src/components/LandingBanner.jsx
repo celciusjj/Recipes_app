@@ -14,7 +14,6 @@ const LandingBanner = () => {
 
     return (
         <div className="landing_container">
-            <img src="bcq.jpg" className="landing_banner_img" alt="banner_img" />
             <div className="landing_div_text">
                 <h2>
                     Recetas
@@ -25,11 +24,12 @@ const LandingBanner = () => {
                     para todos
                 </h2>
             </div>
+            <img src="bcq.jpg" className="landing_banner_img" alt="banner_img" />
             {windowSize.width <= 920 &&
                 <div className="landing_banner_card_container">
                     {
                         cards.map(card =>
-                            <LinkCard text={card.text} url={card.url} />
+                            <LinkCard key={Math.random()} text={card.text} url={card.url} />
                         )
                     }
                 </div>
