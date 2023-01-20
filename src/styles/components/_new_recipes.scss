@@ -27,7 +27,7 @@
         padding-left: 0px;
         padding-right: 0px;
     }
-
+    margin-bottom: 20px;
     padding-top: 10px;
     padding-left: 60px;
     padding-right: 60px;
@@ -36,4 +36,10 @@
     flex-wrap: nowrap;
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
+
+.new_recipes_recipes_container::-webkit-scrollbar {
+    display: none;
+  }
