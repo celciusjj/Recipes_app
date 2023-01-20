@@ -1,0 +1,33 @@
+.spinner {
+    margin-top: 26px;
+    margin-left: 15px;
+    border: 4px solid rgba(0, 0, 0, .1);
+    border-left-color: transparent;
+    border-radius: 50%;
+}
+
+.spinner {
+    border: 4px solid rgba(248, 0, 0, 0.1);
+    border-left-color: transparent;
+    width: 26px;
+    height: 26px;
+}
+
+.spinner {
+    border: 4px solid $primary;
+    border-left-color: transparent;
+    width: 26px;
+    height: 26px;
+
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

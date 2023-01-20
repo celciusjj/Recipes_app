@@ -6,16 +6,26 @@ import { useQuery } from "react-query"
 
 
 const NewRecipesPage = () => {
-    const { recipes, setRecipes } = useContext(RecipersContext);
+    const { recipes, setRecipes, setLoading } = useContext(RecipersContext);
     const { data, status } = useQuery('recipes', getRecipes);
 
     useEffect(() => {
         if (status === 'success') {
+            setLoading(false);
             const { results } = data;
             console.log(results);
             setRecipes(results);
         }
-    }, [data, setRecipes, status])
+
+        if (status === 'loading') {
+            setLoading(true);
+        }
+
+        if (status === 'error') {
+            setLoading(false);
+        }
+
+    }, [data, setRecipes, status, setLoading])
 
     return (
         <div>

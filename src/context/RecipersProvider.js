@@ -5,11 +5,14 @@ const RecipersContext = createContext();
 const RecipersProvider = ({ children }) => {
 
     const [recipes, setRecipes] = useState([]);
+    const [loading, setLoading] = useState(false);
     return (
         <RecipersContext.Provider
             value={{
                 recipes,
-                setRecipes
+                setRecipes,
+                loading,
+                setLoading
             }}
         >
             {children}

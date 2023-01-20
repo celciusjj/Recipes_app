@@ -1,9 +1,13 @@
-import  { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { linkCardsInfo } from "../utils/variables";
 import useWindowSize from '../hooks/useWindowsSize';
+import RecipersContext from '../context/RecipersProvider';
+
 const Header = () => {
+    const { loading } = useContext(RecipersContext);
     const windowSize = useWindowSize();
     const [cards, setCards] = useState(linkCardsInfo);
+
     useEffect(() => {
         setCards(linkCardsInfo);
     }, [])
@@ -11,7 +15,9 @@ const Header = () => {
     return (
         <header className="header_container">
             <div className="header_div_container_logo">
-                <h1>Recipe</h1><h1>App</h1>
+                <h1>Recipe</h1>
+                <h1>App</h1>
+                {loading && <div class='spinner'></div>}
             </div>
             {
                 windowSize.width >= 920 ?

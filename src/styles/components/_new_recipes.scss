@@ -6,6 +6,8 @@
     color: $primary;
     font-family: $primary_font;
     font-weight: 100;
+    display: flex;
+    
 
     @media (max-width: 720px) {
         font-size:65px;
