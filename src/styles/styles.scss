@@ -1,0 +1,14 @@
+@import './base/settings';
+
+@font-face {
+    font-family: "Monster_Clubhouse";   /*Can be any text*/
+    src: local("Monster_Clubhouse"),
+      url("../fonts/Monster_Clubhouse.ttf") format("truetype");
+  }
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import './components//link_card';
+@import './components/header';
+@import './components/landing-banner';
+@import './components/new_recipes';
+@import './components/recipes_card';
+@import './components/footer';

@@ -1,0 +1,75 @@
+.recipes_card_container {
+    margin-bottom: 160px;
+    flex: 0 0 auto;
+    margin: 16px 16px 160px 16px;
+}
+
+.recipes_card_body {
+    margin-top: 40px;
+    width: 266px;
+    height: 240px;
+    border-radius: 16px;
+    opacity: 1;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+    background: transparent linear-gradient(180deg, #dbf3ff 0%, #ffffff 100%) 0% 0% no-repeat padding-box;
+    position: relative;
+}
+
+.recipes_card_presentation {
+    top: -80px;
+    left: 38px;
+    position: absolute;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    background: transparent url('../../../public/Ojingeo-muchim-1.png') 0% 0% no-repeat padding-box;
+}
+
+.recipes_card_rate_container {
+    display: flex;
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+
+    justify-content: space-between;
+
+    div {
+        display: flex;
+        margin-left: 12px;
+        &:last-child {
+            height: 19px;
+            width: 17px;
+            margin-right: 20px;
+            margin-top: 40px;
+        }
+        p {
+            font-family: $secondary_font;
+            font-size: 26px;
+            color: $secondary;
+            margin-left: 12.5px;
+        }
+    }
+}
+
+.recipes_card_name_container {
+    display: flex;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    justify-content: center;
+
+    p {
+        font-size: 30px;
+        color: $primary;
+        &:first-child{
+            font-family: $secondary_font;
+
+            margin-right: 5px;
+        }
+        &:last-child{
+            padding-top: 10px;
+            font-family: $primary_font;
+        }
+    }
+}

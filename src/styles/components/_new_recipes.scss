@@ -1,0 +1,16 @@
+.new_recipes_page_text {
+    margin: 1ch;
+    font-size: 70px;
+    margin-left: 70px;
+    color: $primary;
+    font-family: $primary_font;
+    font-weight: 100;
+}
+
+.new_recipes_recipes_container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+}
