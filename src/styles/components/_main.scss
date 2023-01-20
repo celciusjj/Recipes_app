@@ -6,15 +6,4 @@
     height: 100%;
 }
 
-@media only screen and (max-width: 1000px) {
-
-    *,
-    html,
-    body,
-    .row {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
-}
+html,body { margin:0; padding: 0; }
