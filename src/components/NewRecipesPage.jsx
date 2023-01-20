@@ -37,7 +37,7 @@ const NewRecipesPage = () => {
                         <RecipeCard
                             key={item.id}
                             url={item.image}
-                            name={item.title}
+                            name={item.title.split[0]}
                             text={item.nutrition.nutrients[0].name}
                         />
                     ))

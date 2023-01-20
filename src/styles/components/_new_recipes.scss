@@ -15,6 +15,10 @@
         justify-content: center;
     }
 
+    @media (max-width: 370px) {
+        font-size:50px;
+    }
+
 }
 
 .new_recipes_recipes_container {
