@@ -7,8 +7,6 @@
     font-family: $primary_font;
     font-weight: 100;
     display: flex;
-    
-
     @media (max-width: 720px) {
         font-size:65px;
         margin: 0px;
@@ -16,7 +14,6 @@
         text-align: center;
         justify-content: center;
     }
-
     @media (max-width: 360px) {
         font-size:45px;
     }
@@ -25,12 +22,12 @@
 
 .new_recipes_recipes_container {
     @media (max-width: 720px) {
-        padding-top: 10px;
+        padding-top: 30px;
         padding-left: 0px;
         padding-right: 0px;
     }
     margin-bottom: 20px;
-    padding-top: 10px;
+    padding-top: 20px;
     padding-left: 60px;
     padding-right: 60px;
     display: flex;

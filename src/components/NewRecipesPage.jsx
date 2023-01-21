@@ -13,7 +13,6 @@ const NewRecipesPage = () => {
         if (status === 'success') {
             setLoading(false);
             const { results } = data;
-            console.log(results);
             setRecipes(results);
         }
 
@@ -47,8 +46,8 @@ const NewRecipesPage = () => {
                         <RecipeCard
                             key={item.id}
                             url={item.image}
-                            name={item.title.split[0]}
-                            text={item.nutrition.nutrients[0].name}
+                            name={(item.title.split(" "))[0]}
+                            text={`${(item.title.split(" ")).slice(-1)} `}
                         />
                     ))
                     //recipe car by default
